@@ -13,9 +13,9 @@ The model aims to find the best-fitting linear relationship between inputs and t
 The relationship is modeled as a linear equation:
 $$ h_\theta(x) = wx + b $$
 Where:
-*   $$ w $$ is the weight (slope)
-*   $$ b $$ is the bias (intercept)
-*   $$ x $$ is the input feature
+*   w  is the weight (slope)
+*   b  is the bias (intercept)
+*   x  is the input feature
 
 **2. Cost Function (Mean Squared Error)**
 To evaluate the model's performance, we use the Mean Squared Error (MSE) cost function, which measures the average squared difference between predicted and actual values:
