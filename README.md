@@ -11,7 +11,7 @@ The model aims to find the best-fitting linear relationship between inputs and t
 
 **1. Hypothesis Function**
 The relationship is modeled as a linear equation:
-$$ h_\theta(x) = wx + b $$
+y_pred = w * x + b
 Where:
 *   w  is the weight (slope)
 *   b  is the bias (intercept)
@@ -19,7 +19,7 @@ Where:
 
 **2. Cost Function (Mean Squared Error)**
 To evaluate the model's performance, we use the Mean Squared Error (MSE) cost function, which measures the average squared difference between predicted and actual values:
-$$ J(w, b) = \frac{1}{N} \sum_{i=1}^{N} (y_i - (wx_i + b))^2 $$
+J(w, b) = (1/N) * sum( (y_i - (w * x_i + b))^2 )
 
 **3. Optimization (Gradient Descent)**
 We minimize the cost function by iteratively updating the weights and bias using Gradient Descent. The gradients are calculated as:
@@ -28,8 +28,8 @@ $$ \frac{\partial J}{\partial w} = \frac{-2}{N} \sum_{i=1}^{N} x_i (y_i - y_{pre
 $$ \frac{\partial J}{\partial b} = \frac{-2}{N} \sum_{i=1}^{N} (y_i - y_{pred}) $$
 
 The parameters are updated using the learning rate ($$ \alpha $$):
-$$ w = w - \alpha \frac{\partial J}{\partial w} $$
-$$ b = b - \alpha \frac{\partial J}{\partial b} $$
+w = w - alpha * dJ/dw
+b = b - alpha * dJ/db
 
 ### Implementation Details
 
@@ -37,7 +37,7 @@ The `LinearRegression` class is implemented with the following key components:
 
 *   **`__init__(learning_rate, n_iterations)`**: Initializes the hyperparameters.
 *   **`fit(X, y)`**: Training loop that executes gradient descent. It initializes parameters, computes predictions, calculates gradients, and updates weights/bias for `n_iterations`.
-*   **`predict(X)`**: Outputs predictions for new data using the learned $$ w $$ and $$ b $$.
+*   **`predict(X)`**: Outputs predictions for new data using the learned  w  and  b .
 
 ### Usage
 
